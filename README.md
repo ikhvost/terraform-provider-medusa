@@ -1,1 +1,1 @@
-# terraform-provider-medusajs
+# terraform-provider-medusa

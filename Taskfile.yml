@@ -1,0 +1,22 @@
+version: '3'
+
+tasks:
+  build-local:
+    cmds:
+      - go build -o terraform-provider-medusa_{{ .VERSION }}
+      - mkdir -p ~/.terraform.d/plugins/registry.terraform.io/ikhvost/medusa/{{ .VERSION }}/{{ .PLATFORM }}/
+      - mv terraform-provider-medusa_{{ .VERSION }} ~/.terraform.d/plugins/registry.terraform.io/ikhvost/medusa/{{ .VERSION }}/{{ .PLATFORM }}/terraform-provider-medusa_v{{ .VERSION }}
+      - cmd: codesign --deep --force -s - ~/.terraform.d/plugins/registry.terraform.io/ikhvost/medusa/{{ .VERSION }}/{{ .PLATFORM }}/terraform-provider-medusa_v{{ .VERSION }}
+        platforms: [ darwin ]
+    vars:
+      VERSION: 99.0.0
+      PLATFORM:
+        sh: echo "$(go env GOOS)_$(go env GOARCH)"
+
+  format:
+    cmds:
+      - go fmt ./...
+
+  docs:
+    cmds:
+      - go generate ./...
