@@ -50,7 +50,7 @@ func (r *salesChannelResource) Schema(_ context.Context, _ resource.SchemaReques
 				},
 			},
 			"name": schema.StringAttribute{
-				Description: "The name of the shipping profile.",
+				Description: "The name of the sales channel.",
 				Required:    true,
 			},
 			"description": schema.StringAttribute{

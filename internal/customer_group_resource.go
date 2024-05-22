@@ -50,7 +50,7 @@ func (r *customerGroupResource) Schema(_ context.Context, _ resource.SchemaReque
 				},
 			},
 			"name": schema.StringAttribute{
-				Description: "The name of the sales channel.",
+				Description: "The name of the customer group.",
 				Required:    true,
 			},
 		},

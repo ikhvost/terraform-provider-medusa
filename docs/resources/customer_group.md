@@ -23,7 +23,7 @@ resource "medusa_customer_group" "my-customer-group" {
 
 ### Required
 
-- `name` (String) The name of the sales channel.
+- `name` (String) The name of the customer group.
 
 ### Read-Only
 

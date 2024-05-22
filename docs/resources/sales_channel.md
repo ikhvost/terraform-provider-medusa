@@ -26,7 +26,7 @@ resource "medusa_sales_channel" "my-sales-channel" {
 ### Required
 
 - `description` (String) The description of the sales channel.
-- `name` (String) The name of the shipping profile.
+- `name` (String) The name of the sales channel.
 
 ### Optional
 
