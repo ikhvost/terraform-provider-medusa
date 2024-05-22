@@ -238,5 +238,6 @@ func (p *medusaProvider) Resources(_ context.Context) []func() resource.Resource
 		NewSalesChannelResource,
 		NewCustomerGroupResource,
 		NewProductCategoryResource,
+		NewProductCollectionResource,
 	}
 }
