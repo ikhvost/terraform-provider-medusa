@@ -234,5 +234,6 @@ func (p *medusaProvider) Resources(_ context.Context) []func() resource.Resource
 	return []func() resource.Resource{
 		NewRegionResource,
 		NewStoreResource,
+		NewShippingProfileResource,
 	}
 }
