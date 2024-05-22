@@ -233,5 +233,6 @@ func (p *medusaProvider) DataSources(_ context.Context) []func() datasource.Data
 func (p *medusaProvider) Resources(_ context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
 		NewRegionResource,
+		NewStoreResource,
 	}
 }
